@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    tools:context="com.wishadesign.app.skochvoting.fragment.LastSlideFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terms and Conditions"
+        android:fontFamily="@font/pt_sans"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skoch Awards are a part of national capacity building exercise through sharing best practices. Building a social media community is an integral part of the exercise to be able to get geometrical results. Everyone involved in the award or the voting process is expected to be a part of our social media network. Namely, Facebook, Twitter etc. This is additionally desired in the personal capacity of individuals as well since in their progression in life they would be a part of multiple organisations in varying capacities. We would like to stay in touch and carry on mutual learning. You can see our privacy policy here. As an essential part of the awards process the nominees and the voters have to follow our two Twitter handles and also like the relevant Facebook page. This is also required as we communicate through these and would not like anyone to miss out on important announcements. Since, Twitter, Facebook and other social media organisations have their own privacy policies, we recommend that you review these before using the medium. These are absolutely standard policies in respect to each platform and no customisation or change has been made by us in any of the policies."
+        android:fontFamily="@font/pt_sans"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:textSize="12dp"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:hint="Enter Your Name"/>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/pt_sans"
+        android:text="Confirm"/>
+
+</LinearLayout>
