@@ -18,7 +18,7 @@ public class WebviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_webview);
 
         WebView webContainer = (WebView) findViewById(R.id.webview_container);
-        webContainer.loadUrl("http://skochvoting.tk/voting/signin/signin.html");
+        webContainer.loadUrl("http://skochvoting.tk/user/signin/signin.html");
 
     }
 
