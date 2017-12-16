@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ public class LastSlideFragment extends Fragment {
     private String mParam2;
 
     private EditText mUserNameText;
-    private Button mConfirmButton;
+    private ImageView mConfirmButton;
 
     public LastSlideFragment() {
     }
@@ -72,7 +73,7 @@ public class LastSlideFragment extends Fragment {
 
     private void initView(View rootView) {
         mUserNameText = (EditText) rootView.findViewById(R.id.edit_name);
-        mConfirmButton = (Button) rootView.findViewById(R.id.confirm_btn);
+        mConfirmButton = (ImageView) rootView.findViewById(R.id.confirm_btn);
     }
 
 }
