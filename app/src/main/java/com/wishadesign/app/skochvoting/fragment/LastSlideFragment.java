@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.CookieSyncManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wishadesign.app.skochvoting.R;
+import com.wishadesign.app.skochvoting.activity.MainActivity;
 import com.wishadesign.app.skochvoting.activity.WebviewActivity;
 
 public class LastSlideFragment extends Fragment {
@@ -60,7 +63,9 @@ public class LastSlideFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if(!mUserNameText.getText().toString().equals("")) {
-                    startActivity(new Intent(getContext(), WebviewActivity.class));
+                    Intent intent = new Intent(getContext(), WebviewActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
                 } else {
                     Toast.makeText(getContext(), "Please enter the Name.", Toast.LENGTH_LONG).show();
                 }

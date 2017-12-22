@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            if(position == 3) {
+            if(position == 6) {
                 return LastSlideFragment.newInstance();
             }
             return SlideFragment.newInstance(position + 1);
@@ -64,7 +64,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 4;
+            return 7;
         }
     }
+
+    public ViewPager getViewPager() {
+        return mViewPager;
+    }
+
 }
