@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,6 +72,29 @@ public class LastSlideFragment extends Fragment {
                 }
             }
         });
+
+        mUserNameText.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    switch (keyCode) {
+                        case KeyEvent.KEYCODE_DPAD_CENTER:
+                        case KeyEvent.KEYCODE_ENTER:
+                            if(!mUserNameText.getText().toString().equals("")) {
+                                Intent intent = new Intent(getContext(), WebviewActivity.class);
+                                startActivity(intent);
+                                getActivity().finish();
+                            } else {
+                                Toast.makeText(getContext(), "Please enter the Name.", Toast.LENGTH_LONG).show();
+                            }
+                            return true;
+                        default:
+                            break;
+                    }
+                }
+                return false;
+            }
+        });
+
 
         return rootView;
 
